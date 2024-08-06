@@ -1,6 +1,11 @@
-import { Fragment } from "react";
+
+import { MouseEvent } from "react";
+
 function ListGroup() {
   let items = ["Holland", "Italy", "San Jose", "Miami", "Norway", "Finland"];
+
+  // Event handler
+  const handleClick = (event : MouseEvent) => console.log(event);
 
   return (
     <>
@@ -11,7 +16,7 @@ function ListGroup() {
           <li
             className="list-group-item"
             key={item}
-            onClick={(event) => console.log(event)}
+            onClick={handleClick} //pass reference
           >
             {item}
           </li>
